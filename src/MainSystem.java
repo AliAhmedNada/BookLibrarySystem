@@ -48,7 +48,9 @@ public class MainSystem {
 				break;
 
 				case 5:
-
+					System.out.println("Please Enter bookname you want to search for");
+					String bookname = in.next();
+					booksearch(bookname);
 					break;
 
 			}
@@ -93,8 +95,8 @@ public class MainSystem {
 /**/
 
 	public static void booksearch(String bookname){
-
-
+		Book b = new Book(null,bookname,null);
+			lib.searchbook(b);
 	}
 
 	private static void saveAndQuit() {

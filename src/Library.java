@@ -20,9 +20,8 @@ public class Library extends Object implements Serializable {
 		collection.set(index,book);
 	}
 
-	public void searchbook(String bookname){
-
-
+	public void searchbook(Book bookname){
+	System.out.println(collection.contains(bookname));
 	}
 	
 	@Override
