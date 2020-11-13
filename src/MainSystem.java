@@ -21,7 +21,7 @@ public class MainSystem {
 					+ "\nEnter 2 List All books"
 					+ "\nEnter 3 Add new Book"
 					+ "\nEnter 4 Edit From Book list"
-					+"\nEnter 5 to search for Book");
+					+"\nEnter 5 Search for Book");
 
 			int answer = in.nextInt();
 			switch (answer) {
@@ -48,9 +48,9 @@ public class MainSystem {
 				break;
 
 				case 5:
-					System.out.println("Please Enter bookname you want to search for");
-					String bookname = in.next();
-					booksearch(bookname);
+					System.out.println("Please Enter book Id");
+					int id = in.nextInt();
+					booksearch(id);
 					break;
 
 			}
@@ -60,7 +60,7 @@ public class MainSystem {
 
 	public static void addBook() {
 		String title, author,description;
-
+		int Id;
 		System.out.println("\nEnter Title: ");
 		title = in.next();
 
@@ -71,14 +71,17 @@ public class MainSystem {
 		System.out.println("\nEnter description: ");
 		description = in.next();
 
+		System.out.println("\nEnter Id: ");
+		Id = in.nextInt();
 
-		Book b = new Book(description, title, author);
+		Book b = new Book(description, title, author,Id);
 		lib.addBook(b);
 	}
 
 	/**/
 	public static void changebook(int index) {
 		String title, author,description;
+		int Id;
 
 		System.out.println("\nEnter Title: ");
 		title = in.next();
@@ -89,13 +92,16 @@ public class MainSystem {
 		System.out.println("\nEnter description: ");
 		description = in.next();
 
-		Book b = new Book(description, title, author);
+		System.out.println("\nEnter Id: ");
+		Id = in.nextInt();
+
+		Book b = new Book(description, title, author,Id);
 		lib.changebook(index,b);
 	}
 /**/
 
-	public static void booksearch(String bookname){
-		Book b = new Book(null,bookname,null);
+	public static void booksearch(int Id){
+		Book b = new Book(null,null,null,Id);
 			lib.searchbook(b);
 	}
 
