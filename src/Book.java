@@ -2,7 +2,7 @@ import java.io.Serializable;
 
 
 public class Book implements Serializable{
-	private int Id;
+	public int Id;
 	private String title, author,description;
 
 	public Book(){

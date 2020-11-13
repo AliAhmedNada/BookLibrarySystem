@@ -101,8 +101,7 @@ public class MainSystem {
 /**/
 
 	public static void booksearch(int Id){
-		Book b = new Book(null,null,null,Id);
-			lib.searchbook(b);
+			System.out.println(lib.searchbook(Id));
 	}
 
 	private static void saveAndQuit() {

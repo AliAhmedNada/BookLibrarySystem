@@ -20,8 +20,21 @@ public class Library extends Object implements Serializable {
 		collection.set(index,book);
 	}
 
-	public void searchbook(Book bookname){
-	System.out.println(collection.contains(bookname));
+	public String searchbook(int Id){
+	//System.out.println(collection.iterator());
+		int counter=0;
+		String total = "\n";
+		Iterator<Book> i = collection.iterator();
+		while(i.hasNext()){
+			Book b = (Book) i.next();
+			if (b.Id == Id) {
+				total = total + b.toString() + "\n";
+				counter = counter + 1;
+			}
+			}
+
+		return total;
+
 	}
 	
 	@Override
