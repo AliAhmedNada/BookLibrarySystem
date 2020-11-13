@@ -2,7 +2,7 @@
 
 this is a simple library program which help you to store the books in a serialized file
 
-###Options given to you as follow : 
+### Options given to you as follow : 
 1. Load Seralized Library.
 2. Exit and Save
 3. List All books
@@ -10,10 +10,10 @@ this is a simple library program which help you to store the books in a serializ
 5. Edit From Book list
 6. Search for Book
 
-##### first step 
+##### First step 
 you have to load file.ser , by entering `file` in first option , before you close you have to save the program
 
-##### second Step 
+##### Second Step 
 view all books added , edit , search whatever book you  want
 
 ##### Search for a book 
