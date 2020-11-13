@@ -11,7 +11,7 @@ public class MainSystem {
 
 	static String fileName = null;
 	static Library lib = new Library();
-	static Scanner in = new Scanner(System.in);
+	static Scanner in = new Scanner(System.in).useDelimiter("\n");
 	static Boolean running = true;
 
 	public static void main(String[] args) {
@@ -20,7 +20,8 @@ public class MainSystem {
 					+ "\nEnter 1 Exit and Save"
 					+ "\nEnter 2 List All books"
 					+ "\nEnter 3 Add new Book"
-					+ "\nEnter 4 Edit From Book list");
+					+ "\nEnter 4 Edit From Book list"
+					+"\nEnter 5 to search for Book");
 
 			int answer = in.nextInt();
 			switch (answer) {
@@ -46,14 +47,17 @@ public class MainSystem {
 				changebook(index);
 				break;
 
+				case 5:
+
+					break;
+
 			}
 		}
 		System.exit(0);
 	}
 
 	public static void addBook() {
-		int isbn;
-		String title, author;
+		String title, author,description;
 
 		System.out.println("\nEnter Title: ");
 		title = in.next();
@@ -61,18 +65,18 @@ public class MainSystem {
 		System.out.println("\nEnter Author: ");
 		author = in.next();
 
-		System.out.println("\nEnter ISBN: ");
-		isbn = in.nextInt();
+
+		System.out.println("\nEnter description: ");
+		description = in.next();
 
 
-		Book b = new Book(isbn, title, author);
+		Book b = new Book(description, title, author);
 		lib.addBook(b);
 	}
 
 	/**/
 	public static void changebook(int index) {
-		int isbn;
-		String title, author;
+		String title, author,description;
 
 		System.out.println("\nEnter Title: ");
 		title = in.next();
@@ -80,14 +84,19 @@ public class MainSystem {
 		System.out.println("\nEnter Author: ");
 		author = in.next();
 
-		System.out.println("\nEnter ISBN: ");
-		isbn = in.nextInt();
+		System.out.println("\nEnter description: ");
+		description = in.next();
 
-
-		Book b = new Book(isbn, title, author);
+		Book b = new Book(description, title, author);
 		lib.changebook(index,b);
 	}
 /**/
+
+	public static void booksearch(String bookname){
+
+
+	}
+
 	private static void saveAndQuit() {
 		// TODO Auto-generated method stub
 		System.out.println("Enter file name: ");

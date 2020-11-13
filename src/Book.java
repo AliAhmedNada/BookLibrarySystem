@@ -3,17 +3,16 @@ import java.io.Serializable;
 
 public class Book implements Serializable{
 	
-	private int isbn;
-	private String title, author;
+	private String title, author,description;
 
 	public Book(){
-		isbn = 0;
+		description = null;
 		title = null;
 		author = null;
 	}
 	
-	public Book(int isbn, String title, String author){
-		this.isbn = isbn;
+	public Book(String description, String title, String author){
+		this.description = description;
 		this.title = title;
 		this.author = author;
 	}
@@ -21,7 +20,7 @@ public class Book implements Serializable{
 	@Override
 	public String toString(){
 		return "\nTitle: " + title + "\nAuthor: " + author +
-				"\nISBN: " + isbn + "\n";
+				"\ndescription: " + description + "\n";
 	}
 
 }

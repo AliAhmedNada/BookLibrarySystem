@@ -19,6 +19,11 @@ public class Library extends Object implements Serializable {
 	public void changebook(int index,Book book){
 		collection.set(index,book);
 	}
+
+	public void searchbook(String bookname){
+
+
+	}
 	
 	@Override
 	public String toString() {
